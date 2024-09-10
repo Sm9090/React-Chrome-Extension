@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Whatsapp Blur ",
+  "version": "1.0.0",
+  "description": "WhatsApp Blur is a Chrome extension designed to protect your privacy by blurring WhatsApp messages on the web interface. With this extension, your chat messages will automatically be blurred, keeping prying eyes away from your conversations until you hover over a specific message. Built using React, TypeScript, and TailwindCSS, it offers a seamless way to maintain confidentiality while using WhatsApp Web.",
+  "icons": {
+    "48": "icon.png",
+    "64": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "React Chrome Extension"
+  },
+  "permissions": ["activeTab", "bookmarks"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

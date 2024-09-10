@@ -1,0 +1,1 @@
+(()=>{"use strict";chrome.runtime.onInstalled.addListener((function(){console.log("clicked ")})),chrome.bookmarks.onCreated.addListener((function(){console.log("bookmarked")}))})();
